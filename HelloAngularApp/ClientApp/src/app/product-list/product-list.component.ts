@@ -3,8 +3,7 @@ import { DataService } from '../data.service';
 import { Product } from '../product';
 
 @Component({
-    templateUrl: './product-list.component.html',
-    providers: [DataService]
+    templateUrl: './product-list.component.html'
 })
 export class ProductListComponent implements OnInit {
 
@@ -12,6 +11,12 @@ export class ProductListComponent implements OnInit {
     constructor(private dataService: DataService) { }
 
     ngOnInit() {
+        this.load();
+    }
+    load() {
         this.dataService.getProducts().subscribe((data: Product[]) => this.products = data);
+    }
+    delete(id: number) {
+        this.dataService.deleteProduct(id).subscribe(data => this.load());
     }
 }

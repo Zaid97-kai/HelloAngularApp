@@ -7,6 +7,7 @@ import { Product } from '../product';
     templateUrl: './product-detail.component.html',
     providers: [DataService]
 })
+
 export class ProductDetailComponent implements OnInit {
  
     id: number;

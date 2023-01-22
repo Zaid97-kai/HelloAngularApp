@@ -18,7 +18,11 @@
 
 	<ItemGroup>
 	  <None Remove="ClientApp\src\app\data.service.ts" />
+	  <None Remove="ClientApp\src\app\not-found.component.ts" />
+	  <None Remove="ClientApp\src\app\product-create\product-create.component.ts" />
 	  <None Remove="ClientApp\src\app\product-detail.component.ts" />
+	  <None Remove="ClientApp\src\app\product-edit\product-edit.component.ts" />
+	  <None Remove="ClientApp\src\app\product-form\product-form.component.ts" />
 	  <None Remove="ClientApp\src\app\product-list\product-list.component.ts" />
 	</ItemGroup>
 
