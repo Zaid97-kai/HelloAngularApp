@@ -24,6 +24,14 @@
               "namedChunks": false,
               "vendorChunk": false,
               "buildOptimizer": true
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
           }
         },
@@ -31,7 +39,16 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "helloangularapp:build"
-          }
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "helloangularapp:build:production"
+            },
+            "development": {
+              "browserTarget": "helloangularapp:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
         }
       }
     }
