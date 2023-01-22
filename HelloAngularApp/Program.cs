@@ -1,6 +1,13 @@
+using HelloAngularApp.Models.Context;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+string connectionString = "Host=localhost;Port=5432;Database=productdb;Username=postgres;Password=qaz123";
+builder.Services.AddDbContext<ApplicationContext>(options => options.UseNpgsql(connectionString));
+
+builder.Services.AddControllers();
 
 builder.Services.AddSpaStaticFiles(configuration =>
 {
@@ -8,6 +15,8 @@ builder.Services.AddSpaStaticFiles(configuration =>
 });
 
 var app = builder.Build();
+
+app.UseRouting();
 
 app.UseHttpsRedirection();
 
@@ -22,6 +31,11 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseSpaStaticFiles();
 }
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 app.UseSpa(spa =>
 {
