@@ -1,0 +1,1 @@
+{"ast":null,"code":"import 'zone.js/dist/zone';","map":{"version":3,"mappings":"AAAA,OAAO,mBAAmB","names":[],"sourceRoot":"","sources":["C:\\Users\\Zaid\\source\\repos\\HelloAngularApp\\HelloAngularApp\\ClientApp\\src\\polyfills.ts"],"sourcesContent":["import 'zone.js/dist/zone';"]},"metadata":{},"sourceType":"module","externalDependencies":[]}
