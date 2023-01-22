@@ -1,0 +1,8 @@
+﻿<h2>Список моделей</h2>
+<table class="table table-striped">
+    <tbody>
+    <tr *ngFor="let p of products">
+        <td><a [routerLink]="['product', p.id]" class="nav-link">{{p?.name}}</a></td>
+    </tr>
+    </tbody>
+</table>
